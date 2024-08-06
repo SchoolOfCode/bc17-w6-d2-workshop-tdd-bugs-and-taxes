@@ -1,6 +1,8 @@
 export function calculateScrabbleScore(word) {
-    if (word === "A" || word === "a") {
+    const lowerCaseWord = word.toLowerCase()
+    if (lowerCaseWord === "a") {
         return 1;
     }
     else return null
 }
+
