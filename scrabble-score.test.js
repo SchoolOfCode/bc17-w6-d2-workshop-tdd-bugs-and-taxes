@@ -36,15 +36,7 @@ test.each([
     expect(calculateScrabbleScore(a)).toBe(expected);
 });
 
-// test.each([
-//     [1, 1, 2],
-//     [1, 2, 3],
-//     [2, 1, 3],
-// ])("add(%i, %i) -> %i", (a, b, expected) => {
-//     expect(a + b).toBe(expected);
-// });
-
-// // this will return
-// // ✓ add(1, 1) -> 2
-// // ✓ add(1, 2) -> 3
-// // ✓ add(2, 1) -> 3
+//Write a new failing test for a word with more than one letter. Pick the word and figure out its score.
+test("bare bones test", () => {
+    expect(calculateScrabbleScore("XYLOPhone")).toBe(24);
+});
