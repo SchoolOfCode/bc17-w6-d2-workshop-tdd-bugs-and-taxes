@@ -39,4 +39,5 @@ test.each([
 //Write a new failing test for a word with more than one letter. Pick the word and figure out its score.
 test("bare bones test", () => {
     expect(calculateScrabbleScore("XYLOPhone")).toBe(24);
+    expect(() => calculateScrabbleScore(124)).toThrowError('Unsupported')
 });

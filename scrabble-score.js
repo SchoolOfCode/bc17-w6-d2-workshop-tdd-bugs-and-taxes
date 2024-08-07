@@ -29,17 +29,21 @@ const letterValue = [
 let wordArray = [];
 
 export function calculateScrabbleScore(word) {
+    try {
     const lowerCaseWord = word.toLowerCase(); //take the word and turn it into lowercase
     wordArray = [...lowerCaseWord]; // spread the lowercase word into an array
     let score = 0; //start score as 0
     
     wordArray.forEach((c) => { //for each letter (c) do the following fucntion
     let index = letterValue.findIndex(({letter}) => letter === c) // we compare every letter in the answer array to every (c)
+    
     if (index === -1) { //if letter does not match return null
-        return null
+        throw new Error(`Invalid entry was made`);
     }
+
     let playerScore = letterValue[index].score
     score += playerScore
     });
     return score
+} catch (error) { throw Error(`Unsupported`);}
 }
